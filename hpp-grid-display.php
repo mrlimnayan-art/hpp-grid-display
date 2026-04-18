@@ -20,6 +20,23 @@ if ( file_exists( $puc_path ) ) {
         'hpp-grid-display-slave'
     );
     $myUpdateChecker->setBranch('main');
+
+    // ==========================================
+// ប្រព័ន្ធ AUTO-UPDATE ពី GITHUB
+// ==========================================
+$puc_path = __DIR__ . '/plugin-update-checker-5.6/plugin-update-checker.php';
+if ( file_exists( $puc_path ) ) {
+    require_once $puc_path;
+    $myUpdateChecker = \YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
+        'https://github.com/mrlimnayan-art/hpp-grid-display-slave', // សូមពិនិត្យមើលឈ្មោះ Repo នេះឲ្យច្បាស់ថាត្រូវឬអត់
+        __FILE__,
+        'hpp-grid-display-slave'
+    );
+    $myUpdateChecker->setBranch('main');
+    
+    // បន្ថែមបន្ទាត់នេះ (សូមប្តូរអក្សរ ghp_... ទៅជា Token ពិតប្រាកដរបស់លោកអ្នក)
+    $myUpdateChecker->setAuthentication('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');
+}
 }
 
 add_filter( 'the_title', 'hpp_safe_stock_badge_display', 10, 2 );
