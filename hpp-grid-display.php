@@ -2,7 +2,7 @@
 /**
  * Plugin Name: HangPoPok Grid Stock Display (Slave Version)
  * Description: បង្ហាញស្លាកស្តុកនៅលើ Grid Post (មានភ្ជាប់ Auto-Update ពី GitHub)
- * Version: 1.5
+ * Version: 1.6
  * Author: WP Admin
  */
 
